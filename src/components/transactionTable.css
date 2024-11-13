@@ -1,43 +1,78 @@
-/* Styling for the table container */
-.tableContainer{
+.tableContainer {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    height: 30vh;
 }
+
 table {
     width: 80%;
+    table-layout: fixed; 
     border-collapse: collapse;
     margin-top: 20px;
+    min-height: 250px;
 }
-.buttonContainer{
-    
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
-/* Styling for table headers */
+
+
+th:nth-child(1),
+td:nth-child(1) {
+    width: 20%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 40%; 
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    width: 15%; 
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+    width: 10%;
+}
+
+th:nth-child(5),
+td:nth-child(5) {
+    width: 15%;
+}
+
+
 th {
     background-color: #f4f4f4;
     color: #333;
-    padding: 10px;
-    text-align: left;
     font-weight: bold;
     border-bottom: 2px solid #ddd;
 }
 
-/* Styling for table rows */
+
 td {
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
     color: #555;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
 }
 
-/* Hover effect for table rows */
+
 tr:hover {
     background-color: #f9f9f9;
 }
 
-/* Styling for pagination buttons */
-button {
+
+.buttonContainer {
     margin-top: 15px;
+}
+
+button {
     padding: 8px 12px;
     background-color: #007bff;
     color: white;
@@ -48,18 +83,16 @@ button {
     transition: background-color 0.3s ease;
 }
 
-/* Disabled state for pagination buttons */
 button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
 
-/* Hover effect for active buttons */
 button:not(:disabled):hover {
     background-color: #0056b3;
 }
 
-/* Space between pagination buttons */
+
 button + button {
     margin-left: 8px;
 }
