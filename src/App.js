@@ -55,6 +55,7 @@ function App() {
                 </label>
               </div>
               <div className="controls__search">
+                Search
                 <input
                   type="text"
                   placeholder="Search transactions..."

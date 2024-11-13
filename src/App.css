@@ -42,9 +42,10 @@
 
 .controls__search input {
   padding: 5px;
-  width: 200px;
-  border: 1px solid #ddd;
+  width: 600px;
+  border: 1px solid #c5c5c5;
   border-radius: 4px;
+  margin-left:2rem;
 }
 
 .dashboard__table {
