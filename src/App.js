@@ -70,6 +70,7 @@ function App() {
 
             <section className="dashboard__charts">
               <TransactionsBarChart data={priceRangeData} />
+              <TransactionsStatistics statistics={statistics} />
             </section>
           </main>
       </div>
