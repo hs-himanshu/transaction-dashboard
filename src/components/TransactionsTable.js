@@ -14,21 +14,29 @@ const TransactionsTable = ({ transactions, page, setPage }) => {
             <table>
                 <thead>
                     <tr>
+                        <th>Image</th>
                         <th>Title</th>
                         <th>Description</th>
                         <th>Price</th>
                         <th>Sold</th>
-                        <th>Date of Sale</th>
+                        {/* <th>Date of Sale</th> */}
                     </tr>
                 </thead>
                 <tbody>
                     {transactions.map((transaction) => (
                         <tr key={transaction.id}>
+                            <td>
+                                <img
+                                    src={transaction.image} 
+                                    alt={transaction.title}
+                                    className="productImage"
+                                />
+                            </td>
                             <td>{transaction.title}</td>
                             <td>{truncateDescription(transaction.description, 10)}</td>
                             <td>{transaction.price}</td>
                             <td>{transaction.sold ? 'Yes' : 'No'}</td>
-                            <td>{transaction.dateOfSale}</td>
+                            {/* <td>{transactions.dateOfSale}</td> */}
                         </tr>
                     ))}
                 </tbody>
